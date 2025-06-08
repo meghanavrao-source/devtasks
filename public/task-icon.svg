@@ -1,0 +1,4 @@
+<!-- public/task-icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4f46e5">
+  <path d="M3 4a1 1 0 0 1 1-1h6v2H5v14h14v-5h2v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4zm15.707 1.293 1 1a1 1 0 0 1-1.414 1.414L16 6.414l-1.293 1.293a1 1 0 0 1-1.414-1.414l2-2a1 1 0 0 1 1.414 0zM15 9v2h-4V9h4zm0 4v2h-4v-2h4z" />
+</svg>

@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node", // Default, no need to manually add file extensions
+    "module": "commonjs",
     "jsx": "react-jsx",
     "strict": true,
     "baseUrl": "./src",
     "paths": { "~/*": ["*"] },
-    "types": ["@emotion/react"]
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "rootDir": "./"
   },
   "include": ["src"]
 }

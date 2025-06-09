@@ -1,39 +1,13 @@
-// src/App.tsx
-
 import React, { useState, useEffect } from 'react';
 import GlobalStyles from './styles/GlobalStyles';
 import TaskForm from './features/TaskForm/TaskForm';
 import KanbanBoard from './features/KanbanBoard/KanbanBoard';
 import { Task, TaskStatus } from './types';
+import { mockTasks } from './mocks/mockTasks';
 
 const LOCAL_STORAGE_KEY = 'devtasks-tasks';
 
-const initialTasks: Task[] = [
-  {
-    id: '1',
-    name: 'Set up project',
-    description: 'Initialize repo and basic structure',
-    dueDate: '2025-06-20',
-    tags: ['setup', 'important'],
-    status: TaskStatus.TODO,
-  },
-  {
-    id: '2',
-    name: 'Build components',
-    description: 'Build React components',
-    dueDate: '2025-06-22',
-    tags: ['frontend'],
-    status: TaskStatus.IN_PROGRESS,
-  },
-  {
-    id: '3',
-    name: 'Deploy',
-    description: 'Deploy to production',
-    dueDate: '2025-06-25',
-    tags: ['deployment'],
-    status: TaskStatus.DONE,
-  },
-];
+const initialTasks: Task[] = mockTasks;
 
 const App = () => {
   const [tasks, setTasks] = useState<Task[]>(() => {
@@ -41,7 +15,6 @@ const App = () => {
     return saved ? JSON.parse(saved) : initialTasks;
   });
 
-  // Save to localStorage whenever tasks change
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
   }, [tasks]);
